@@ -34,8 +34,8 @@ Running this tool is free as it is covered under the AWS Free Tier. If you have 
 1. [Log in to your AWS account](https://docs.aws.amazon.com/cloudshell/latest/userguide/getting-started.html#start-session) using the IAM User with sufficient permissions described above. 
 2. Launch [AWS CloudShell](https://docs.aws.amazon.com/cloudshell/latest/userguide/getting-started.html#launch-region-shell) in any region. 
 3. In the AWS CloudShell terminal, run this script this to install the dependencies:
-   ``` bash
-   cd /tmp
+``` bash
+cd /tmp
 rm -rf service-screener-init
 git clone https://github.com/junaid-ahmed-init/service-screener-init.git
 cd service-screener-init
@@ -45,8 +45,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 python3 unzip_botocore_lambda_runtime.py
 alias screener='python3 $(pwd)/main.py'
-
-   ```
+```
 
 ## Using Service Screener
 When running Service Screener, you will need to specify the regions and services you would like it to run on. For the full list of services currently supported, please see "SERVICES_IDENTIFIER_MAPPING" in [Config.py](./utils/Config.py).
