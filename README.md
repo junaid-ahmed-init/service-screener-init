@@ -36,15 +36,16 @@ Running this tool is free as it is covered under the AWS Free Tier. If you have 
 3. In the AWS CloudShell terminal, run this script this to install the dependencies:
    ``` bash
    cd /tmp
-   python3 -m venv .
-   source bin/activate
-   python3 -m pip install --upgrade pip
-   rm -rf service-screener-v2
-   git clone https://github.com/aws-samples/service-screener-v2.git
-   cd service-screener-v2
-   pip install -r requirements.txt
-   python3 unzip_botocore_lambda_runtime.py
-   alias screener='python3 $(pwd)/main.py'
+rm -rf service-screener-init
+git clone https://github.com/junaid-ahmed-init/service-screener-init.git
+cd service-screener-init
+python3 -m venv .
+source bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+python3 unzip_botocore_lambda_runtime.py
+alias screener='python3 $(pwd)/main.py'
+
    ```
 
 ## Using Service Screener
@@ -184,7 +185,7 @@ screener --regions ap-southeast-1 --others '{"WA": {"region": "ap-southeast-1", 
 ```
 
 ## Downloading the report
-The output is generated as a ~/service-screener-v2/output.zip file. 
+The output is generated as a ~/service-screener-init/output.zip file. 
 You can [download the file](https://docs.aws.amazon.com/cloudshell/latest/userguide/working-with-cloudshell.html#files-storage) in the CloudShell console by clicking the *Download file* button under the *Actions* menu on the top right of the CloudShell console. 
 
 Once downloaded, unzip the file and open 'index.html' in your browser. You should see a page like [this](https://dev.d11el1twchxpia.amplifyapp.com/961319563195/index.html).
