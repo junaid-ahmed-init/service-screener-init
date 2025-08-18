@@ -139,11 +139,12 @@ class WATools():
         self.waInfo['MilestoneNumber'] = latest_milestone['MilestoneNumber']
         return True
 
-def createMilestoneIfNotExists(self):
-    # Skipping milestone creation as per user preference
-    print("Skipping milestone creation")
-    return
-def createMilestone(self):
+    def createMilestoneIfNotExists(self):
+        # Skipping milestone creation as per user preference
+        print("Skipping milestone creation")
+        return
+
+    def createMilestone(self):
         max_retries = 3
         retry_delay = 2  # seconds
         
