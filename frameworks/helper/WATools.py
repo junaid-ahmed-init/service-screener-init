@@ -140,8 +140,6 @@ class WATools():
         return True
 
     def createMilestoneIfNotExists(self):
-        if self.cfg['newMileStone'] == 0:
-            self.createMilestone()
             return
 
         try:
