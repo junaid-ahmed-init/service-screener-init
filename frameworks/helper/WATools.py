@@ -139,10 +139,11 @@ class WATools():
         self.waInfo['MilestoneNumber'] = latest_milestone['MilestoneNumber']
         return True
 
-    def createMilestoneIfNotExists(self):
-            return
-
-        try:
+def createMilestoneIfNotExists(self):
+    # Skipping milestone creation as per user preference
+    print("Skipping milestone creation")
+    return
+try:
             if not self._get_latest_milestone():
                 print("No milestones found for workload {}... creating milestone...".format(self.waInfo['WorkloadId']))
                 self.createMilestone()
