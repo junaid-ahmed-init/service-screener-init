@@ -143,15 +143,7 @@ def createMilestoneIfNotExists(self):
     # Skipping milestone creation as per user preference
     print("Skipping milestone creation")
     return
-try:
-            if not self._get_latest_milestone():
-                print("No milestones found for workload {}... creating milestone...".format(self.waInfo['WorkloadId']))
-                self.createMilestone()
-        except BotoCoreError as e:
-            print(f"An error occurred: {str(e)}")
-            return None
-        
-    def createMilestone(self):
+def createMilestone(self):
         max_retries = 3
         retry_delay = 2  # seconds
         
