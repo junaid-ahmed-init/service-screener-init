@@ -9,7 +9,7 @@ import time
 ## --others '{"WA": {"region": "ap-southeast-1", "reportName":"SS_Report", "newMileStone":0}}'
 
 class WATools():
-    DEFAULT_REPORTNAME = 'Webx - Admin Api'
+    DEFAULT_REPORTNAME = 'Befiler - ChatBot'
     DEFAULT_NEWMILESTONE = 0
     waInfo = {
         'isExists': False,
