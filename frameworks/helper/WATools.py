@@ -9,7 +9,7 @@ import time
 ## --others '{"WA": {"region": "ap-southeast-1", "reportName":"SS_Report", "newMileStone":0}}'
 
 class WATools():
-    DEFAULT_REPORTNAME = 'Abhi - Core Workload'
+    DEFAULT_REPORTNAME = 'Abhi - Mobile App'
     DEFAULT_NEWMILESTONE = 0
     waInfo = {
         'isExists': False,
